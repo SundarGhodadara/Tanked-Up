@@ -1,0 +1,28 @@
+{
+    "arrivals":[
+        {
+            "id":"1",
+            "url":"./images/img-5.png"
+        },
+        {
+            "id":"2",
+            "url":"./images/hoddy-2.png"
+        },
+        {
+            "id":"3",
+            "url":"./images/img-7.png"
+        },
+        {
+            "id":"4",
+            "url":"./images/sweet-2.jpg"
+        },
+        {
+            "id":"5",
+            "url":"./images/pant-1.png"
+        },
+        {
+            "id":"6",
+            "url":"./images/bag-3.png"
+        }
+    ]
+}

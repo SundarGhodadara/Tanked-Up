@@ -1,0 +1,184 @@
+
+.end-container{
+    width: 100vw;
+    /* border: 2px solid red; */
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services{
+    width: 97vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service{
+    width: 300px;
+    height: 250px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.service img{
+    width: 100px;
+    height: 100px;
+    background-blend-mode: screen;
+}
+.service h2{
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.footer-container{
+    width: 100vw;
+    background-color: white;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.about{
+    width: 35%;
+    min-width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+.about img{
+    width: 150px;
+    height: 60px;
+}
+
+.about h2{
+    font-size: 16px;
+}
+
+.about p{
+    font-size: 16px;
+}
+
+.link-container{
+    width: 35%;
+    min-width: 350px;
+    display: flex;
+
+}
+
+.links{
+    width: 50%;
+    min-width:50px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.links h2{
+    font-size: 16px;
+    margin: 10px 5px;
+}
+
+.links ul{
+    margin: 20px 10px;
+}
+
+.links li{
+    list-style: none;
+    margin: 7px 0;
+    font-size: 15px;
+}
+
+.mails{
+    width: 25%;
+    min-width: 250px;
+    padding-top: 30px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mails h2{
+    font-size: 16px;
+    margin: 10px 5px;
+}
+
+.mails p{
+    margin: 20px 10px;
+}
+
+.mails input{
+    width: 80%;
+    min-width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin: 20px 10px;
+    outline: none;
+}
+
+.bn13 {
+    display: inline-block;
+    border: 2px solid black;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+    animation: bn13bouncy 5s infinite linear;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .bn13:hover {
+    background-color: black;
+    color: white;
+  }
+
+
+  @keyframes bn13bouncy {
+    0% {
+      top: 0em;
+    }
+    40% {
+      top: 0em;
+    }
+    43% {
+      top: -0.9em;
+    }
+    46% {
+      top: 0em;
+    }
+    48% {
+      top: -0.4em;
+    }
+    50% {
+      top: 0em;
+    }
+    100% {
+      top: 0em;
+    }
+  }

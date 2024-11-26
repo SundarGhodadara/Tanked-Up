@@ -1,0 +1,14 @@
+.loadContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loadContainer>p{
+    font-size: 15px;
+}
+
+.loader{
+    width: 70px;
+    height: 70px;
+}

@@ -1,0 +1,577 @@
+.mainContainer {
+    width: 100vw;
+    height: fit-content;
+    /* min-height: 100vh; */
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.emailVerification {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logoContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.verification {
+    width: 100%;
+    padding: 10px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 18px;
+    /* text-align: center; */
+}
+
+.Login {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.email {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.enterEmail,
+.enterCode {
+    width: 100%;
+    height: 40px;
+    background-color: #f5f5f5;
+    outline: none;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid rgb(115, 115, 115);
+    border-radius: 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.sendCode {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.submitBtn {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.register {
+    color: black;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register:hover {
+    color: blue;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .emailVerification {
+        max-width: 90%;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .Login {
+        font-size: 20px;
+    }
+
+    .enterEmail,
+    .enterCode,
+    .sendCode,
+    .submitBtn {
+        font-size: 15px;
+        height: 38px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainContainer {
+        padding: 0;
+    }
+
+    .emailVerification {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .Login {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .enterEmail,
+    .enterCode,
+    .sendCode,
+    .submitBtn {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .register {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+/* for product upload UI page */
+.adminContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    background-color: #efefef;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    border-bottom: 1px solid rgb(206, 203, 203);
+    /* border: 2px solid black; */
+}
+
+.listingContainer {
+    width: 80vw;
+    /* border: 2px solid blue; */
+    max-width: 1100px;
+    /* height: 1000px; */
+    padding: 20px;
+    /* background-color: #e8e8e8; */
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.listingHeading {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.itemDetailsContainer {
+    width: 90vw;
+    max-width: 1000px;
+    height: auto;
+    /* border: 2px solid red; */
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Main container for item images */
+.itemImagesContainer {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap;  */
+    gap: 20px;
+    /* Add spacing between items */
+    padding-left: 50px;
+}
+
+/* Upload container for the main image */
+.upload-container {
+    border: 2px dashed #ccc;
+    width: 90%;
+    /* Use percentage for flexible width */
+    max-width: 300px;
+    /* Limit max width */
+    height: 400px;
+    /* Allow height to adjust based on content */
+    padding: 20px;
+    /* Add padding for better spacing */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    text-align: center;
+    margin: 20px auto;
+    /* Center horizontally */
+    /* border: 2px solid red; */
+}
+
+.upload-container:hover {
+    border-color: #777;
+    /* Darken border color on hover */
+}
+
+.upload-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    /* Adjust height dynamically */
+}
+
+.full-upload-image {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* Hides the default file input */
+.upload-input {
+    display: none;
+}
+
+/* Text inside upload container */
+p {
+    color: #666;
+    font-size: 1rem;
+    /* Use relative units */
+    margin: 0;
+}
+
+/* Icon for file upload */
+.fileUploadeIcon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Styling for uploading additional images */
+.uploadMoreImages {
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    /* Full width */
+    padding: 20px;
+}
+
+.image-grid {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    /* Responsive grid */
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    width: 20%;
+    /* height: 350px; */
+}
+
+.image-upload-box {
+    border: 2px solid black;
+    width: 65px;
+    /* Full width of grid item */
+    height: 90px;
+    /* Adjust height dynamically */
+    aspect-ratio: 1/1;
+    /*Maintain consistent proportions*/
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.image-upload-box:hover {
+    border-color: #777;
+}
+
+.uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.plus-icon {
+    font-size: 1.5rem;
+    /* Use scalable font size */
+    color: #666;
+}
+
+/* Input field styling */
+.inputfield {
+    width: 90%;
+    /* Adjust width for smaller screens */
+    max-width: 500px;
+    margin: 10px auto;
+    /* Center on smaller screens */
+    height: 40px;
+    /* Increase height for better UX */
+    padding: 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid rgb(142, 142, 142);
+    border-radius: 5px;
+}
+
+
+
+.listBtn {
+    margin: 30px;
+    width: 130px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(27, 163, 27);
+    border: 1px solid rgb(48, 47, 47);
+}
+
+
+/* for checkbox */
+.checkBoxGroup {
+    margin-left: 10px;
+}
+
+.checkBox {
+    color: #666;
+}
+
+.selectCategoryBox {
+    width: 300px;
+    margin: 10px;
+}
+
+.imageUploadBtn {
+    width: 130px;
+    height: 30px;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.input {
+    width: fit-content;
+    height: 50px;
+    /* border: 2px solid red; */
+    border: none;
+    text-align: center;
+    /* Centers the text horizontally */
+    display: block;
+    /* Centers the input itself */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #efefef;
+    font-size: 16px;
+}
+
+.removeBtn {
+    width: 20px;
+    height: 20px;
+}
+
+.columeHeading {
+    font-size: 18px;
+}
+
+.logoutBtn {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    position: absolute;
+    top: 120px;
+    left: 100px;
+}
+
+.GoChevronLeft {
+    width: 20px;
+    height: 20px;
+}
+
+.logoutBtnText {
+    margin: 2px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.tableContainer{
+    width: 95vw;
+    max-width: 1285px;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    border: 1px solid gray;
+    margin: 20px auto;
+}
+
+.listedProductTable {
+    width:  100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    
+}
+
+.listedProductTable th,
+.listedProductTable td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    word-wrap: break-word; /* Ensure content fits in smaller screens */
+    font-size: 1rem;
+}
+.listedProductTable td .input{
+    font-size: 1rem;
+    /* width: 100%; */
+    height:120px;
+    resize: none;
+}
+
+.listedProductTable td img{
+    width: 100px;
+    height: 120px;
+    /* margin-top: 20px; */
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .itemImagesContainer {
+        flex-wrap: wrap;
+        padding-left: 10px;
+
+    }
+
+    .upload-container {
+        /* max-width: 100%; */
+        min-width: 300px;
+        padding: 15px;
+    }
+
+    .image-grid {
+        margin-top: -40px;
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        /* Smaller columns */
+    }
+
+    .image-upload-box {
+        width: 75px;
+        height: 105px;
+        aspect-ratio: 1 / 1;
+        /* Square boxes for smaller screens */
+    }
+
+    p {
+        font-size: 0.9rem;
+        /* Adjust font size */
+    }
+
+    .plus-icon {
+        font-size: 1.2rem;
+        /* Smaller plus icon */
+    }
+}
+
+@media (max-width: 480px) {
+    .imageUploadBtn{
+        margin-top: 20px !important;
+    }
+
+    .itemImagesContainer {
+        flex-wrap: wrap;
+        padding-left: 10px;
+
+    }
+
+    .upload-container {
+        padding: 10px;
+        /* border: 2px solid black; */
+
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        /* Smaller columns */
+        gap: 5px;
+        /* border: 2px solid black; */
+        width: 320px !important;
+    }
+
+    .image-upload-box {
+        width: 60px;
+        height: 90px;
+        aspect-ratio: 1 / 1;
+        /* Square boxes for smaller screens */
+    }
+
+    .inputfield {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+    .listedProductTable th,
+    .listedProductTable td {
+    font-size: 0.7rem;
+}
+.listedProductTable td input{
+    font-size: 0.7rem;
+}
+.listedProductTable td img{
+    width: 70px;
+    height: 85px;
+}
+
+}

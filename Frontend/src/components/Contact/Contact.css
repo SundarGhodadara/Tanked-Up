@@ -1,0 +1,129 @@
+.Container {
+    width: 100vw;
+    height: auto;
+    padding: 40px 0;
+    border-bottom: 1px solid rgb(206, 203, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefef;
+}
+
+.Contact_Us {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Contact_Us h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.Name_Email {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.Message {
+    width: 100%;
+    height: auto;
+}
+
+.Send_Btn {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.nameinput, .emailinput {
+    width: 48%;
+    height: 40px;
+    padding-left: 10px;
+    background-color: #efefef;
+    border: 1px solid rgb(115, 115, 115);
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: #efefef;
+}
+
+.support {
+    width: 100vw;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(206, 203, 203);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #efefef;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .Name_Email {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nameinput, .emailinput {
+        width: 100%;
+    }
+
+    .Send_Btn {
+        height: 45px;
+    }
+
+    .Contact_Us h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .Container {
+        padding: 20px 0;
+    }
+
+    .Contact_Us {
+        gap: 15px;
+    }
+
+    .nameinput, .emailinput, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .Send_Btn {
+        height: 45px;
+        font-size: 0.9em;
+    }
+
+    .support {
+        font-size: 16px;
+    }
+}

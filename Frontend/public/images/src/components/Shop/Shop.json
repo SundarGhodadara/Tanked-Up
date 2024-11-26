@@ -1,0 +1,40 @@
+{
+    "products":[
+        {
+            "id":"1",
+            "url":"./images/bag-3.png",
+            "productName":"T-SHIRT",
+            "price":"RS 999.00"
+        },
+        {
+            "id":"2",
+            "url":"../assets/img-4.png",
+            "productName":"T-SHIRT",
+            "price":"RS 999.00"
+        },
+        {
+            "id":"3",
+            "url":"../assets/img-4.png",
+            "productName":"T-SHIRT",
+            "price":"RS 999.00"
+        },
+        {
+            "id":"4",
+            "url":"../assets/bag-3.png",
+            "productName":"T-SHIRT",
+            "price":"RS 999.00"
+        },
+        {
+            "id":"5",
+            "url":"../assets/hoddy-1.png",
+            "productName":"T-SHIRT",
+            "price":"RS 999.00"
+        },
+        {
+            "id":"6",
+            "url":"../assets/img-9.png",
+            "productName":"T-SHIRT",
+            "price":"RS 999.00"
+        }
+    ]
+}

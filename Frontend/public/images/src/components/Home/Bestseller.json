@@ -1,0 +1,20 @@
+{
+    "bestproducts":[
+        {
+            "id":"1",
+            "bigimage":"../images/shop.png",
+            "productimage":"../images/img-5.png",
+            "productname":"sweet shirt",
+            "productprice":"999.00",
+            "productstrikeprice":"1100.00"
+        },
+        {
+            "id":"2",
+            "bigimage":"../images/pant-1.png",
+            "productimage":"../images/img-7.png",
+            "productname":"sweet shirt",
+            "productprice":"1099.00",
+            "productstrikeprice":"1200.00"
+        }
+    ]
+}

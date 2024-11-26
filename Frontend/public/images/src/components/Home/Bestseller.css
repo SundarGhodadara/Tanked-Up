@@ -1,0 +1,158 @@
+.bestsell-container{
+    width: 100vw;
+    height: 750px;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid  rgb(206, 203, 203);
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+.heading{
+    font-size: 13px;
+}
+
+.pro-con{
+  width:72vw ;
+  height: 550px;
+  /* border: 2px solid blue; */
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.prev button{
+  width: 30px;
+  height:30px;
+}
+
+.product-main-container{
+  width: 65vw;
+  height: 550px;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  margin-left: 10px;
+
+}
+
+.post button{
+  width: 30px;
+  height: 30px;
+  margin-left: -10px;
+}
+
+.product-container{
+    min-width: 65vw;
+    height: 550px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    /* border: 2px solid brown; */
+    overflow-x: scroll;
+}
+
+.main-img{
+    width: 57%;
+    min-width:55% ;
+    height: 100%;
+    /* box-sizing: border-box; */
+}
+.main-img img{
+    width: 100%;
+    height: 100%;
+}
+.product-img{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.product {
+    width: 80%;
+    height: 60%;
+} 
+.product img{
+    width: 100%;
+    height: 100%;
+}
+
+.product-name{
+    font-size: 23px !important;
+}
+.product-price{
+    margin-top: -10px;
+    color: red;
+    font-size: 20px;
+}
+.product-price s{
+    color: black;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.bn13 {
+    display: inline-block;
+    padding: 0.65em 1.6em;
+    border: 2px solid black;
+    margin: 25px 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+    animation: bn13bouncy 5s infinite linear;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .bn13:hover {
+    background-color: black;
+    color: white;
+  }
+
+
+  @keyframes bn13bouncy {
+    0% {
+      top: 0em;
+    }
+    40% {
+      top: 0em;
+    }
+    43% {
+      top: -0.9em;
+    }
+    46% {
+      top: 0em;
+    }
+    48% {
+      top: -0.4em;
+    }
+    50% {
+      top: 0em;
+    }
+    100% {
+      top: 0em;
+    }
+  }
+
+
+  
