@@ -12,9 +12,10 @@ function Cart() {
 
   useEffect(() => {
     let items = localStorage.getItem("Items");
-    if (items) {
+    if (items != undefined) {
       setItemArray(JSON.parse(items));
     }
+
   }, []);
 
   const validation = async () => {
