@@ -48,7 +48,7 @@ function Main() {
             <div className="img-slider">
                 <div className="slider-1">
                     <div className="video-container">
-                        <video src={tankedup} controls autoPlay loop></video>
+                        <video src="https://firebasestorage.googleapis.com/v0/b/tankedup-56984.appspot.com/o/tankedup-1.mp4?alt=media&token=f5f02617-5550-46a6-88d3-872dbf1ae769" controls autoPlay loop></video>
                     </div>
                     <div className="content-container">
                         <h1>TRENDING WEARS</h1>
