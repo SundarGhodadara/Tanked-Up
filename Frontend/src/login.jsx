@@ -19,7 +19,7 @@ function login() {
       try {
         const response = await axios.post('https://tanked-up-backend.onrender.com/login/token', { email } , {withCredentials:true});
         console.log(response.data);
-        Navigate('/home');
+        Navigate('/');
         
       } catch (error) {
         console.log(error);
