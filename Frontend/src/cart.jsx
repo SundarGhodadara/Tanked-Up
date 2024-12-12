@@ -31,6 +31,7 @@ function Cart() {
     else if (response.data == 'Valid User') {
       navigate('/UserProfile')
     }
+    showPopup(true);
   }
 
 
@@ -67,7 +68,7 @@ function Cart() {
     try {
       // Show the confirmation popup
       validation();
-      setShowPopup(true);
+      // setShowPopup(true);
   
       const orderItems = itemArray.map(item => ({
         image:item.images[0],
