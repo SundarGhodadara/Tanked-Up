@@ -68,6 +68,7 @@ function Cart() {
       
 
       const orderItems = itemArray.map(item => ({
+        itemId:item._id,
         image: item.images[0],
         productName: item.productName || "", // Ensure a default if undefined
         productDescription: item.productDescription || "",
@@ -76,6 +77,9 @@ function Cart() {
         selectedSizes: item.userSizes || "",
         quantity: item.quantity || 1,
       }));
+
+      console.log(orderItems);
+      
 
       setItemArray([]);
       setShowPopup(!showPopup);
