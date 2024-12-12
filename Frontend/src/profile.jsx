@@ -17,12 +17,13 @@ import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import { initializeApp } from "firebase/app";
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/storage'
-import { height } from "@mui/system";
 import { GoTrash } from "react-icons/go";
 import { GoChevronLeft } from "react-icons/go";
+import Loader from "./components/Loader/Loader";
 
 
 function profile() {
+  const [buffer, setBuffer] = useState(false);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -42,11 +43,12 @@ function profile() {
 
 
 
-
     const validation = async () => {
+      setBuffer(true);
       const response = await axios.get('https://tanked-up-backend.onrender.com/login/verifyUser', { withCredentials: true });
 
       console.log(response.data);
+      setBuffer(false);
 
       if (response.data == 'Not LoggedIn') {
         navigate('/Login')
@@ -328,6 +330,7 @@ function profile() {
 
 
   return (
+    buffer ? <Loader/>:
     <div className="adminContainer">
       <div className="logoutBtn" onClick={handleLogout}>
         <GoChevronLeft className='GoChevronLeft' />
