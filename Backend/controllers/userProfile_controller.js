@@ -1,6 +1,7 @@
 const orderModel = require('../models/userProfileModel');
 const {getUser} = require('../utility/auth');
 const userModel = require('../models/userModel');
+const productModel = require('../models/productDetailsModel')
 
 const handleOrder = async (req, res) => {
   try {
@@ -47,6 +48,10 @@ const handleOrder = async (req, res) => {
           userName,
           userEmail,
         });
+
+        await productModel.findByIdAndUpdate(item._id,{
+          $inc: { quantity: -item.quantity }
+        })
 
         return await newOrder.save();
       })

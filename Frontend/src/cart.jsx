@@ -87,6 +87,10 @@ function Cart() {
         items: orderItems
       }, { withCredentials: true });
 
+      // const orderCount = await axios.put('https://tanked-up-backend.onrender.com/placeOrder/', {
+      //   items: orderItems
+      // }, { withCredentials: true });
+
       console.log("ORDER CONFIRM:", order);
       // Clear the cart after successful order
       localStorage.removeItem("Items");
