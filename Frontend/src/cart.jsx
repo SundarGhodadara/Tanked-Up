@@ -13,9 +13,9 @@ function Cart() {
   useEffect(() => {
     try {
       let items = localStorage.getItem("Items");
-    if (items != undefined) {
-      setItemArray(JSON.parse(items));
-    }
+      if (items != undefined) {
+        setItemArray(JSON.parse(items));
+      }
     } catch (error) {
       setItemArray([]);
     }
@@ -73,9 +73,9 @@ function Cart() {
       // Show the confirmation popup
       validation();
       setShowPopup(true);
-  
+
       const orderItems = itemArray.map(item => ({
-        image:item.images[0],
+        image: item.images[0],
         productName: item.productName || "", // Ensure a default if undefined
         productDescription: item.productDescription || "",
         productPrice: item.productPrice || 0,
@@ -83,22 +83,24 @@ function Cart() {
         selectedSizes: item.userSizes || "",
         quantity: item.quantity || 1,
       }));
-  
+
+      setItemArray([]);
+      
       // Send the order to the backend
       const order = await axios.post('https://tanked-up-backend.onrender.com/placeOrder/orderConfirm', {
         items: orderItems
-      },{ withCredentials: true } );
-  
-      console.log("ORDER CONFIRM:" , order);
+      }, { withCredentials: true });
+
+      console.log("ORDER CONFIRM:", order);
       // Clear the cart after successful order
       localStorage.removeItem("Items");
-      setItemArray([]);
-  
+
+
     } catch (error) {
       console.log(error);
     }
   };
-  
+
 
   const closePopup = () => {
     setShowPopup(false);
