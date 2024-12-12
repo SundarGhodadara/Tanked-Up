@@ -30,15 +30,8 @@ function Cart() {
     if (response.data == 'Not LoggedIn') {
       navigate('/Login')
     }
-    else if (response.data == 'Welcome Admin') {
-      navigate('/Profile')
-    }
-    else if (response.data == 'Valid User') {
-      navigate('/UserProfile')
-    }
+    
   }
-
-
 
 
 
@@ -85,7 +78,7 @@ function Cart() {
       }));
 
       setItemArray([]);
-      
+
       // Send the order to the backend
       const order = await axios.post('https://tanked-up-backend.onrender.com/placeOrder/orderConfirm', {
         items: orderItems
