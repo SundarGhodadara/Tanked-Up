@@ -31,7 +31,7 @@ function Cart() {
     else if (response.data == 'Valid User') {
       navigate('/UserProfile')
     }
-    showPopup(true);
+    
   }
 
 
@@ -67,8 +67,8 @@ function Cart() {
   const handlePayment = async () => {
     try {
       // Show the confirmation popup
-      validation();
-      // setShowPopup(true);
+      await validation();
+      setShowPopup(true);
   
       const orderItems = itemArray.map(item => ({
         image:item.images[0],
@@ -77,7 +77,7 @@ function Cart() {
         productPrice: item.productPrice || 0,
         productCategory: item.productCategory || "",
         selectedSizes: item.userSizes || "",
-        quantity: item.quantity || 1,
+        quantity: item.quantity ==0 ? 1: item.quantity,
       }));
   
       // Send the order to the backend
