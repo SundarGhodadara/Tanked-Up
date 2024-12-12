@@ -11,9 +11,13 @@ function Cart() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let items = localStorage.getItem("Items");
+    try {
+      let items = localStorage.getItem("Items");
     if (items != undefined) {
       setItemArray(JSON.parse(items));
+    }
+    } catch (error) {
+      setItemArray([]);
     }
 
   }, []);
