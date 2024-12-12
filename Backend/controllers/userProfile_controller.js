@@ -49,7 +49,7 @@ const handleOrder = async (req, res) => {
           userEmail,
         });
 
-        await productModel.findByIdAndUpdate(item._id,{
+        await productModel.findByIdAndUpdate(item.itemId,{
           $inc: { productStock: -item.quantity }
         })
 
