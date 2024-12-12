@@ -25,7 +25,7 @@ function Navbar() {
             <img src={logo} alt="Logo" />
           </div>
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-            <Link to="/Home">HOME</Link>
+            <Link to="/">HOME</Link>
             <Link to="/Best sellers">BEST SELLERS</Link>
             <Link to="/Shop">SHOP</Link>
             <Link to="/Contact">CONTACT</Link>
