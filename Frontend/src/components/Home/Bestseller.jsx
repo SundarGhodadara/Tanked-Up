@@ -21,7 +21,7 @@ function Bestseller() {
     useEffect(() => {
         const getProductDetails = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/displayItems/bestSelling', { withCredentials: true });
+                const response = await axios.get('https://tanked-up-backend.onrender.com/displayItems/bestSelling', { withCredentials: true });
                 setBestSellingProducts(response.data);
             } catch (error) {
                 console.log(error);

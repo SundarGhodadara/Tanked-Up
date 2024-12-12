@@ -27,7 +27,7 @@ function Bestselling() {
   useEffect(() => {
     const getProductDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/displayItems/bestSelling', { withCredentials: true });
+        const response = await axios.get('https://tanked-up-backend.onrender.com/displayItems/bestSelling', { withCredentials: true });
         console.log(response.data);
 
         setTimeout(()=> {
@@ -267,7 +267,7 @@ export default Bestselling;
 // useEffect (() => {
 //   const fetchBestProduct = async () => {
 //     try {
-//       const products = await axios.get('http://localhost:8000/displayItems/bestSelling')
+//       const products = await axios.get('https://tanked-up-backend.onrender.com/displayItems/bestSelling')
 //       console.log("Best Selling Products", products);
 //       setCartItems(products.data)
       

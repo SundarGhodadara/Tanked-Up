@@ -34,7 +34,7 @@ function Shop() {
   useEffect(() => {
     const getProductDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/displayItems', { withCredentials: true });
+        const response = await axios.get('https://tanked-up-backend.onrender.com/displayItems', { withCredentials: true });
         // console.log(response.data);
 
         setTimeout(() => {

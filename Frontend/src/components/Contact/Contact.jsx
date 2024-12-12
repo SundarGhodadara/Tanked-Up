@@ -14,7 +14,7 @@ function Contact() {
   async function handleContact (){
 
     try {
-      const response = await axios.post('http://localhost:8000/contact' , {email , name , message});
+      const response = await axios.post('https://tanked-up-backend.onrender.com/contact' , {email , name , message});
       console.log(response.data);
       navigate('/contact');
       

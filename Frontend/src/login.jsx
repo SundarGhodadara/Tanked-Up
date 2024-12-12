@@ -17,7 +17,7 @@ function login() {
     }
     else{
       try {
-        const response = await axios.post('http://localhost:8000/login/token', { email } , {withCredentials:true});
+        const response = await axios.post('https://tanked-up-backend.onrender.com/login/token', { email } , {withCredentials:true});
         console.log(response.data);
         Navigate('/home');
         
@@ -32,7 +32,7 @@ function login() {
 
   const sendCode = async () => {
     try {
-      const response = await axios.post('http://localhost:8000/login', { email })
+      const response = await axios.post('https://tanked-up-backend.onrender.com/login', { email })
       console.log(response.data);
       setCode(response.data);
 

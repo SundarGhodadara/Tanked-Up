@@ -10,7 +10,7 @@ function UserProfile() {
 
     const handleLogout = async () => {
         try {
-            await axios.post('http://localhost:8000/logout', {}, { withCredentials: true });
+            await axios.post('https://tanked-up-backend.onrender.com/logout', {}, { withCredentials: true });
             navigate('/Login');
         } catch (error) {
             console.log("Error during logout:", error.response?.data || error.message);
@@ -20,7 +20,7 @@ function UserProfile() {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/displayItems/previousOrders', { withCredentials: true });
+                const response = await axios.get('https://tanked-up-backend.onrender.com/displayItems/previousOrders', { withCredentials: true });
                 const order = response.data;
                 setPreviousOrderList(order);
                 console.log("Fetched order data:", order); 

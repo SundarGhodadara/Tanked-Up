@@ -18,7 +18,7 @@ function Cart() {
   }, []);
 
   const validation = async () => {
-    const response = await axios.get('http://localhost:8000/login/verifyUser', { withCredentials: true });
+    const response = await axios.get('https://tanked-up-backend.onrender.com/login/verifyUser', { withCredentials: true });
 
     console.log(response.data);
 
@@ -80,7 +80,7 @@ function Cart() {
       }));
   
       // Send the order to the backend
-      const order = await axios.post('http://localhost:8000/placeOrder/orderConfirm', {
+      const order = await axios.post('https://tanked-up-backend.onrender.com/placeOrder/orderConfirm', {
         items: orderItems
       },{ withCredentials: true } );
   

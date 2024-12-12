@@ -44,7 +44,7 @@ function profile() {
 
 
     const validation = async () => {
-      const response = await axios.get('http://localhost:8000/login/verifyUser', { withCredentials: true });
+      const response = await axios.get('https://tanked-up-backend.onrender.com/login/verifyUser', { withCredentials: true });
 
       console.log(response.data);
 
@@ -69,7 +69,7 @@ function profile() {
   const handleLogout = async () => {
     try {
       // Call the logout endpoint
-      await axios.post('http://localhost:8000/logout', {}, { withCredentials: true });
+      await axios.post('https://tanked-up-backend.onrender.com/logout', {}, { withCredentials: true });
 
       // Redirect to the login page
       navigate('/Login');
@@ -204,7 +204,7 @@ function profile() {
     else {
       try {
 
-        const response = await axios.post('http://localhost:8000/productDetails', { imageUrl, productName, productPrice, productDescription, productStock, selectedSizes, productCategory }, { withCredentials: true });
+        const response = await axios.post('https://tanked-up-backend.onrender.com/productDetails', { imageUrl, productName, productPrice, productDescription, productStock, selectedSizes, productCategory }, { withCredentials: true });
 
         setListedItem([...listedItem, response.data.product]);
 
@@ -300,7 +300,7 @@ function profile() {
 
   const handleRemove = async (productId) => {
     try {
-      const productRemove = await axios.delete(`http://localhost:8000/productDetails/removeProduct/${productId}`)
+      const productRemove = await axios.delete(`https://tanked-up-backend.onrender.com/productDetails/removeProduct/${productId}`)
 
       setListedItem((prev) => (prev.filter((item) => (item._id !== productId))));
       console.log(productRemove);
@@ -315,7 +315,7 @@ function profile() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/displayItems', { withCredentials: true });
+        const response = await axios.get('https://tanked-up-backend.onrender.com/displayItems', { withCredentials: true });
         setListedItem(response.data);
         console.log(listedItem)
       } catch (error) {

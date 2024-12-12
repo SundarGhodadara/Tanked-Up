@@ -13,7 +13,7 @@ function Register() {
   async function handleRegister (){
 
     try {
-      const response = await axios.post('http://localhost:8000/register' , {email , username});
+      const response = await axios.post('https://tanked-up-backend.onrender.com/register' , {email , username});
       console.log(response.data);
       navigate('/Login');
 
