@@ -50,7 +50,7 @@ const handleOrder = async (req, res) => {
         });
 
         await productModel.findByIdAndUpdate(item._id,{
-          $inc: { quantity: -item.quantity }
+          $inc: { productStock: -item.quantity }
         })
 
         return await newOrder.save();
