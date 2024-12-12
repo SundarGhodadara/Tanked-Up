@@ -78,7 +78,9 @@ function Cart() {
       }));
 
       setItemArray([]);
-      setShowPopup(true);
+      setShowPopup(!showPopup);
+      console.log(showPopup);
+      
 
       // Send the order to the backend
       const order = await axios.post('https://tanked-up-backend.onrender.com/placeOrder/orderConfirm', {
@@ -88,6 +90,8 @@ function Cart() {
       console.log("ORDER CONFIRM:", order);
       // Clear the cart after successful order
       localStorage.removeItem("Items");
+      console.log(showPopup);
+
 
 
     } catch (error) {
