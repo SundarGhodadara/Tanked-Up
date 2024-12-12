@@ -49,8 +49,8 @@ function Cart() {
 
   const handleQuantityChange = (id, value) => {
     const updatedItems = itemArray.map(item => {
-      if (item._id === id) {
-        return { ...item, quantity: value };
+      if (item._id === id && value>0)  {
+        return { ...item, quantity: value  };
       }
       return item;
     });
