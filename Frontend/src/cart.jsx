@@ -30,7 +30,7 @@ function Cart() {
     if (response.data == 'Not LoggedIn') {
       navigate('/Login')
     }
-    
+
   }
 
 
@@ -65,7 +65,7 @@ function Cart() {
     try {
       // Show the confirmation popup
       validation();
-      setShowPopup(true);
+      
 
       const orderItems = itemArray.map(item => ({
         image: item.images[0],
@@ -78,6 +78,7 @@ function Cart() {
       }));
 
       setItemArray([]);
+      setShowPopup(true);
 
       // Send the order to the backend
       const order = await axios.post('https://tanked-up-backend.onrender.com/placeOrder/orderConfirm', {
