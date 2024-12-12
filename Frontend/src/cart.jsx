@@ -25,12 +25,7 @@ function Cart() {
     if (response.data == 'Not LoggedIn') {
       navigate('/Login')
     }
-    else if (response.data == 'Welcome Admin') {
-      navigate('/Profile')
-    }
-    else if (response.data == 'Valid User') {
-      navigate('/UserProfile')
-    }
+    
     
   }
 
@@ -55,7 +50,7 @@ function Cart() {
   const handleQuantityChange = (id, value) => {
     const updatedItems = itemArray.map(item => {
       if (item._id === id) {
-        return { ...item, quantity: parseInt(value, 10) || 1 };
+        return { ...item, quantity: value };
       }
       return item;
     });
@@ -126,7 +121,7 @@ function Cart() {
                     name="numberOfProduct"
                     className="numberOfProduct"
                     min="1"
-                    value={item.quantity || 1}
+                    value={item.quantity}
                     onChange={(e) => handleQuantityChange(item._id, Math.max(1, parseInt(e.target.value)))}
                   />
                   <button className="increase-btn" onClick={() => handleQuantityChange(item._id, item.quantity + 1)}>+</button>
