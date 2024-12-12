@@ -25,8 +25,12 @@ function Cart() {
     if (response.data == 'Not LoggedIn') {
       navigate('/Login')
     }
-    
-    
+    else if (response.data == 'Welcome Admin') {
+      navigate('/Profile')
+    }
+    else if (response.data == 'Valid User') {
+      navigate('/UserProfile')
+    }
   }
 
 
@@ -49,8 +53,8 @@ function Cart() {
 
   const handleQuantityChange = (id, value) => {
     const updatedItems = itemArray.map(item => {
-      if (item._id === id && value>0)  {
-        return { ...item, quantity: value  };
+      if (item._id === id) {
+        return { ...item, quantity: parseInt(value, 10) || 1 };
       }
       return item;
     });
@@ -62,7 +66,7 @@ function Cart() {
   const handlePayment = async () => {
     try {
       // Show the confirmation popup
-      await validation();
+      validation();
       setShowPopup(true);
   
       const orderItems = itemArray.map(item => ({
@@ -72,7 +76,7 @@ function Cart() {
         productPrice: item.productPrice || 0,
         productCategory: item.productCategory || "",
         selectedSizes: item.userSizes || "",
-        quantity: item.quantity ==0 ? 1: item.quantity,
+        quantity: item.quantity || 1,
       }));
   
       // Send the order to the backend
@@ -121,7 +125,7 @@ function Cart() {
                     name="numberOfProduct"
                     className="numberOfProduct"
                     min="1"
-                    value={item.quantity}
+                    value={item.quantity || 1}
                     onChange={(e) => handleQuantityChange(item._id, Math.max(1, parseInt(e.target.value)))}
                   />
                   <button className="increase-btn" onClick={() => handleQuantityChange(item._id, item.quantity + 1)}>+</button>
